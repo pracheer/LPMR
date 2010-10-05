@@ -1,0 +1,13 @@
+Author: Akshay Bhat akshaybhat [at] gmail.com
+
+Organization:
+Folder				Description
+LP			Contains code to perform Community Detection using Hadoop Streaming
+prepreocess_twitter	Contains code to pre process the twitter dataset
+install_hadoop 		Contains code to install, configure and launch hadoop on AWS EC2 machine 
+
+
+
+License: All code in this project is licensed under GPL v 3.0
+
+

@@ -1,0 +1,24 @@
+Author: Akshay Bhat [ akshayubhat@gmail.com ]
+Dscription: This folder contains code to execute Label Propagtion algorithm ona  hadoop cluster [or pseudo distributed cluster], 
+make sure the input file is stored on HDFS.
+
+Input format: The input should consist of information about one node per line, the 
+source identifier should appear first followed by all target nodes which it connects to. 
+Each node should be representated by an integer,starting from 0 to a maximum value.
+All values should be tab delimited.
+
+Note: Missing integer value are allowed, but the memmory will be allocated according to the maximum value.
+ 
+Example: 
+1	2	4	6
+2	4	1
+6	4
+4	3
+3	2
+
+Execution: ./run.sh infile iterations max_node_id 
+
+Options: 
+	infile: name of the file stored on HDFS
+	iterations: number of iterations of the Label Propagation algorithm
+	max_node_id: maximum value of node in the dataset
