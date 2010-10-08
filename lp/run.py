@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 """
-    Author: Akshay U. Bhat
+Author: Akshay U. Bhat
     Description: Python file for setting up and executing Label Propgation job
     example call ./run.py Net.txt 4 17000000 
 """
 import sys,os
-exec_init_string = 'hadoop jar /usr/lib/hadoop-0.20/contrib/streaming/hadoop-streaming-0.20.2+320.jar -input %s -output Label%d.txt -mapper "mapper.py %d" -reducer NONE -file mapper.py'
-exec_string = 'hadoop jar /usr/lib/hadoop-0.20/contrib/streaming/hadoop-streaming-0.20.2+320.jar -input %s -output Label%d.txt -mapper "mapper.py %d Label.txt" -reducer NONE -file mapper.py -file Label.txt'
+exec_init_string = 'hadoop jar /usr/local/hadoop/contrib/streaming/hadoop-0.19.2-streaming.jar  -input %s -output Label%d.txt -mapper "mapper.py %d" -reducer NONE -file mapper.py'
+exec_string = 'hadoop jar /usr/local/hadoop/contrib/streaming/hadoop-0.19.2-streaming.jar  -input %s -output Label%d.txt -mapper "mapper.py %d Label.txt" -reducer NONE -file mapper.py -file Label.txt'
 get_string = 'hadoop fs -getmerge Label#.txt Label.txt'
 
 if __name__ == '__main__':
